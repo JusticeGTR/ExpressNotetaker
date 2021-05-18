@@ -4,9 +4,9 @@ const fs = require('fs')
 const { nanoid } = require('nanoid')
 const id = nanoid();
 
-const PORT = 3000
+const app = express();
+const PORT = process.env.PORT || 3000;
 
-const app = process.env.PORT || express();
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
